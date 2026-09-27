@@ -138,7 +138,7 @@ def hero(t: dict) -> str:
     L = 64  # left margin
     line1, line2 = "We build software", "inside real operations."
     sub = "ai systems · data infrastructure · operational software"
-    size, sub_size = 54, 17
+    size, sub_size = 54, 19
     sub_x = L + MONO.width("$ ", sub_size)
     sub_w = MONO.width(sub, sub_size)
     l2_w = DISPLAY.width(line2, size)
@@ -160,7 +160,7 @@ def hero(t: dict) -> str:
   <g class="n{i} on">
     <circle cx="{num(x)}" cy="{ry}" r="8" fill="none" stroke="{t['g2']}" stroke-width="2"/>
     <circle cx="{num(x)}" cy="{ry}" r="3.2" fill="{t['g2']}"/>
-    <path d="{MONO.path(phases[i], 13, x, ry + 34, anchor='middle')}" fill="{t['text']}"/>
+    <path d="{MONO.path(phases[i], 15, x, ry + 38, anchor='middle')}" fill="{t['text']}"/>
   </g>"""
         for i, x in enumerate(nodes)
     )
@@ -186,7 +186,7 @@ def hero(t: dict) -> str:
     <stop offset="0" stop-color="{t['sheen']}" stop-opacity="0"/><stop offset=".5" stop-color="{t['sheen']}" stop-opacity=".55"/><stop offset="1" stop-color="{t['sheen']}" stop-opacity="0"/>
   </linearGradient>
   <clipPath id="line2"><path d="{DISPLAY.path(line2, size, L, 240)}"/></clipPath>
-  <clipPath id="typing"><rect class="type" x="{num(sub_x)}" y="{298 - 20}" width="{num(sub_w + 2)}" height="28"/></clipPath>
+  <clipPath id="typing"><rect class="type" x="{num(sub_x)}" y="{298 - 22}" width="{num(sub_w + 2)}" height="32"/></clipPath>
   <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="4"/></filter>
   {mark_gradient("hm", t, L, 50, 40)}
 </defs>
@@ -226,7 +226,7 @@ def hero(t: dict) -> str:
   {mark(L, 50, 40, "hm")}
   <path d="{WORDMARK.path("VERNE", 19, L + 58, 77, tracking=0.18)}" fill="{t['text']}"/>
   <rect x="{num(L + 58 + WORDMARK.width("VERNE", 19, 0.18) + 18)}" y="62" width="1" height="18" fill="{t['stroke']}"/>
-  <path d="{MONO.path("FORWARD-DEPLOYED ENGINEERING", 12, L + 58 + WORDMARK.width("VERNE", 19, 0.18) + 37, 76, tracking=0.14)}" fill="{t['g2']}"/>
+  <path d="{MONO.path("FORWARD-DEPLOYED ENGINEERING", 14, L + 58 + WORDMARK.width("VERNE", 19, 0.18) + 37, 77, tracking=0.12)}" fill="{t['g2']}"/>
 </g>
 
 <path class="rise d1" d="{DISPLAY.path(line1, size, L, 176)}" fill="{t['text']}"/>
@@ -238,16 +238,16 @@ def hero(t: dict) -> str:
 <g class="rise d3">
   <path d="{MONO.path("$", sub_size, L, 298)}" fill="{t['g2']}"/>
   <g clip-path="url(#typing)"><path d="{MONO.path(sub, sub_size, sub_x, 298)}" fill="{t['text2']}"/></g>
-  <rect class="cursor" x="{num(sub_x + sub_w + 6)}" y="283" width="9" height="19" fill="{t['g2']}"/>
+  <rect class="cursor" x="{num(sub_x + sub_w + 7)}" y="281" width="10" height="21" fill="{t['g2']}"/>
 </g>
 
 <g class="rise d4">
-  <path d="{MONO.path("// delivery loop", 13, rx0 - 6, ry - 50)}" fill="{t['text3']}"/>
+  <path d="{MONO.path("// delivery loop", 15, rx0 - 8, ry - 50)}" fill="{t['text3']}"/>
   <line x1="{rx0}" y1="{ry}" x2="{rx1}" y2="{ry}" stroke="{t['rail']}" stroke-width="2"/>
   <line class="rail" x1="{rx0}" y1="{ry}" x2="{rx1}" y2="{ry}" stroke="url(#railGrad)" stroke-width="2"/>
 {node_svg}
   <g class="pulse"><circle cx="{rx0}" cy="{ry}" r="9" fill="{t['g2']}" opacity=".35" filter="url(#soft)"/><circle cx="{rx0}" cy="{ry}" r="4" fill="{t['g2']}"/></g>
-  <path d="{MONO.path("ownership moves when the tests pass", 13, rx0 - 6, ry + 84)}" fill="{t['text3']}"/>
+  <path d="{MONO.path("ownership moves when the tests pass", 15, rx0 - 8, ry + 92)}" fill="{t['text3']}"/>
 </g>
 </svg>
 """
@@ -256,10 +256,10 @@ def hero(t: dict) -> str:
 def footer(t: dict) -> str:
     W, H = 1200, 110
     tail = "forward-deployed engineering · dhaka · 23.81°N 90.41°E"
-    mono_size, word_size = 13, 15
+    mono_size, word_size = 15, 17
     word_w = WORDMARK.width("VERNE", word_size, 0.18)
     tail_w = MONO.width(tail, mono_size)
-    mark_h = 22
+    mark_h = 26
     total = mark_h * MARK_RATIO + 12 + word_w + 22 + tail_w + 16
     x = (W - total) / 2
     word_x = x + mark_h * MARK_RATIO + 12
@@ -273,7 +273,7 @@ def footer(t: dict) -> str:
   <linearGradient id="spark" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0" stop-color="{t['g2']}" stop-opacity="0"/><stop offset=".5" stop-color="{t['g2']}"/><stop offset="1" stop-color="{t['g2']}" stop-opacity="0"/>
   </linearGradient>
-  {mark_gradient("fm", t, x, 44, mark_h)}
+  {mark_gradient("fm", t, x, 42, mark_h)}
 </defs>
 <style>
   * {{ transform-box: fill-box; }}
@@ -286,10 +286,10 @@ def footer(t: dict) -> str:
 <rect x="{W * .15}" y="12" width="{W * .7}" height="1" fill="url(#hair)"/>
 <clipPath id="hairClip"><rect x="{W * .15}" y="8" width="{W * .7}" height="10"/></clipPath>
 <g clip-path="url(#hairClip)"><rect class="spark" x="{W * .15}" y="11.5" width="140" height="2" fill="url(#spark)"/></g>
-{mark(x, 44, mark_h, "fm")}
-<path d="{WORDMARK.path("VERNE", word_size, word_x, 61, tracking=0.18)}" fill="{t['text']}"/>
-<path d="{MONO.path(tail, mono_size, tail_x, 60)}" fill="{t['text3']}"/>
-<rect class="cursor" x="{num(tail_x + tail_w + 7)}" y="48" width="7" height="15" fill="{t['g2']}"/>
+{mark(x, 42, mark_h, "fm")}
+<path d="{WORDMARK.path("VERNE", word_size, word_x, 63, tracking=0.18)}" fill="{t['text']}"/>
+<path d="{MONO.path(tail, mono_size, tail_x, 62)}" fill="{t['text3']}"/>
+<rect class="cursor" x="{num(tail_x + tail_w + 8)}" y="48" width="8" height="17" fill="{t['g2']}"/>
 </svg>
 """
 
