@@ -36,9 +36,9 @@ Semantic version control for structured documents: append-only history, stable I
 ### Field notes
 
 <!-- FIELD-NOTES:START -->
-- [In Dynodoc, history is a product feature](https://blog.vernesystems.com/dynodoc-history-is-a-product-feature) &nbsp;<sub>Product engineering · Sep 2026</sub>
-- [Why enterprise RAG fails quietly, and what to design instead](https://blog.vernesystems.com/rag-fails-in-enterprise) &nbsp;<sub>Retrieval systems · May 2026</sub>
-- [How to build audit-ready AI systems for regulated workflows](https://blog.vernesystems.com/audit-ready-ai-systems) &nbsp;<sub>Compliance automation · Apr 2026</sub>
+- [The forward-deployed engineering handover is the deliverable](https://blog.vernesystems.com/fde-handover-ownership-test) &nbsp;<sub>Forward-deployed engineering · Oct 2026</sub>
+- [Human-in-the-loop approval for AI agents is only as good as its binding](https://blog.vernesystems.com/agent-approval-binding) &nbsp;<sub>Agent governance · Oct 2026</sub>
+- [Jev calibration, tested on 1,232 banking support messages](https://blog.vernesystems.com/jev-calibration-test) &nbsp;<sub>Decision models · Oct 2026</sub>
 <!-- FIELD-NOTES:END -->
 
 ### Stack
